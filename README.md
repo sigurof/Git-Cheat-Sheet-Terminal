@@ -1,4 +1,6 @@
-# How-To-Use-Git-Memo
+# Making a repository with existing code
+
+I started to write this as a quick reference just for myself. For some reason, I fleshed it out much more than I needed to. I doubt this will be of use to anyone but it'll be a waste to delete the text now that it's written.
 
 # With GitHub as remote:
 
@@ -12,7 +14,7 @@ This tells git to make a new repo (this does not affect already existing files, 
   
 <code> user@src > git add -A</code>
 
-dash A for "all". Now that we have added all previously existing files, git is aware of them but still does not consider them to be in effect. To make it so, we type:
+dash A for "all". Now that we have added all previously existing files, git is aware of these "changes" but still does not consider them to be in effect. To make it so, we type:
 
 <code> user@src > git commit -m "Write commit message here" </code>
 
@@ -20,7 +22,7 @@ The commit message should give some details about the sort of changes you have m
 
 <code> user@src > git remote add origin githuburl</code>
 
-Now we can check that the url was set correctly by typing the following and checking if the url is the same as what you typed in.
+To check that you typed the correct url, you can run the following, which will print the urls used for pushing and pulling.
 
 <code> user@src > git remote -v </code>
 
@@ -28,6 +30,18 @@ Finally, we actually upload our files from src/ to github by 'pushing' the commi
 
 <code> user@src > git push origin master</code>
 
+# With a directory on a computer or hard disc as the remote repository
+Let source directory = <code> /home/username/src/ </code>
+Let desired remote directory be <code> /remoteharddisc/dir/ </code>
 
-  
-  
+<code> user@somewhere > cd /home/username/src/ </code>
+<code> user@src > git init </code>
+<code> user@src > git add -A </code>
+<code> user@src > git commit -m "First commit"</code>
+
+Now we have made a local git repo. We want to make a remote one now.
+
+<code> user@src > cd /remoteharddisc/dir/ </code>
+<code> user@src > git clone --bare /home/username/src remote-codebase.git</code>
+
+Now we can make changes in <code>/home/username/src/</code> and push them to the remote repository when we want.
