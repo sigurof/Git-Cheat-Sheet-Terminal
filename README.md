@@ -31,17 +31,22 @@ Finally, we actually upload our files from src/ to github by 'pushing' the commi
 <code> user@src > git push origin master</code>
 
 # With a directory on a computer or hard disc as the remote repository
-Let source directory = <code> /home/username/src/ </code>
-Let desired remote directory be <code> /remoteharddisc/dir/ </code>
+Let the source directory = <code> /home/username/src/ </code>
+
+Let the desired remote directory be <code> /remoteharddisc/dir/ </code>
 
 <code> user@somewhere > cd /home/username/src/ </code>
+
 <code> user@src > git init </code>
+
 <code> user@src > git add -A </code>
+
 <code> user@src > git commit -m "First commit"</code>
 
 Now we have made a local git repo. We want to make a remote one now.
 
 <code> user@src > cd /remoteharddisc/dir/ </code>
-<code> user@src > git clone --bare /home/username/src remote-codebase.git</code>
+
+<code> user@dir > git clone --bare /home/username/src remote-codebase.git</code>
 
 Now we can make changes in <code>/home/username/src/</code> and push them to the remote repository when we want.
