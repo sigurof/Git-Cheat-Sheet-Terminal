@@ -53,6 +53,25 @@ Now we can make changes in <code>/home/username/src/</code> and push them to the
 
 # Making a new branch for local codebase and update the remote
 
+First make a new branch, which is just a pointer to commits.
+
 <code> user@src > git branch newbranchname</code>
+
+Now that a new branch has been made, we can switch to it, by:
+
 <code> user@src > git checkout newbranchname</code>
+
+Now we can tell our remote repository about the new branch by pushing it.
+
 <code> user@src > git push remote-repo newbranchname</code>
+
+# Delete a branch both locally and on the remote
+
+To do this, we push the deletion of our branch to the remote first, by:
+
+<code> user@src > git push --delete origin newbranchname</code>
+
+Then we can delete the branch locally:
+
+<code> user@src > git branch -d newbranchname</code>
+
