@@ -50,3 +50,9 @@ Now we have made a local git repo. We want to make a remote one now.
 <code> user@dir > git clone --bare /home/username/src remote-codebase.git</code>
 
 Now we can make changes in <code>/home/username/src/</code> and push them to the remote repository when we want.
+
+# Making a new branch for local codebase and update the remote
+
+<code> user@src > git branch newbranchname</code>
+<code> user@src > git checkout newbranchname</code>
+<code> user@src > git push remote-repo newbranchname</code>
