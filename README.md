@@ -75,3 +75,12 @@ Then we can delete the branch locally:
 
 <code> user@src > git branch -d newbranchname</code>
 
+# Copy a remote branch which is not on the local
+
+Say the remote has the branches 'master' and 'fix_stuff' and the local has 'master'. You want the branch 'fix_stuff' on your local. First, we need to fetch the latest state of the remote branch:
+
+<code> user@src > git fetch origin </code>
+
+Then, we create a new branch by the same name as the branch in the remote:
+
+<code>git checkout -b fix_stuff origin/fix_stuff</code>
