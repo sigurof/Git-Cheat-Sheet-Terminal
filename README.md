@@ -84,3 +84,9 @@ Say the remote has the branches 'master' and 'fix_stuff' and the local has 'mast
 Then, we create a new branch by the same name as the branch in the remote:
 
 <code>git checkout -b fix_stuff origin/fix_stuff</code>
+
+# Can you have several remotes?
+
+Yes. The following command adds a new remote with the name "name" and path "address". The path can be e.g. an html address or a path on your local computer.
+
+<code>user@src > git remote add \<name\> \<address></code>
